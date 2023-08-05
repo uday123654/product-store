@@ -18,6 +18,8 @@ public class DeleteByBrand extends HttpServlet{
 		String brand = req.getParameter("brand");
 		ProductCRUD pc = new ProductCRUD();
 		int res = pc.deleteProductByBrand(brand);
+		System.out.println("Hi");
+		System.out.println("Hello");
 		if(res>0) {
 			RequestDispatcher rd = req.getRequestDispatcher("view");
 			rd.forward(req, resp);
